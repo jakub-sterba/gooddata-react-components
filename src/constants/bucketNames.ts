@@ -6,3 +6,4 @@ export const VIEW = 'view';
 export const STACK = 'stack';
 export const TREND = 'trend';
 export const SEGMENT = 'segment';
+export const SECONDARY = 'secondary';

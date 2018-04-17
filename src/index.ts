@@ -28,8 +28,23 @@ import { BarChart } from './components/BarChart';
 import { ColumnChart } from './components/ColumnChart';
 import { LineChart } from './components/LineChart';
 import { PieChart } from './components/PieChart';
+import { DonutChart } from './components/DonutChart';
 import { Table } from './components/Table';
 import { Headline } from './components/Headline';
+import { AreaChart } from './components/AreaChart';
+import { ColumnLineChart } from './components/ColumnLineChart';
+import { ColumnAreaChart } from './components/ColumnAreaChart';
+import { TreeMapChart } from './components/TreeMapChart';
+import { WordCloudChart } from './components/WordCloudChart';
+import { ScatterChart } from './components/ScatterChart';
+import { HeatMapChart } from './components/HeatMapChart';
+import { BulletChart } from './components/BulletChart';
+import { BubbleChart } from './components/BubbleChart';
+import { WaterfallChart } from './components/WaterfallChart';
+import { FunnelChart } from './components/FunnelChart';
+import { HistogramChart } from './components/HistogramChart';
+import { ParetoChart } from './components/ParetoChart';
+import { DualAxisChart } from './components/DualAxisChart';
 
 const CoreComponents = {
     BaseChart,
@@ -63,7 +78,22 @@ export {
     IVisualizationProperties,
     Kpi,
     LineChart,
+    AreaChart,
     PieChart,
+    DonutChart,
+    ColumnLineChart,
+    DualAxisChart,
+    ColumnAreaChart,
+    TreeMapChart,
+    WordCloudChart,
+    ScatterChart,
+    BulletChart,
+    HeatMapChart,
+    BubbleChart,
+    WaterfallChart,
+    FunnelChart,
+    HistogramChart,
+    ParetoChart,
     PoPHelper,
     PropTypes,
     Table,
