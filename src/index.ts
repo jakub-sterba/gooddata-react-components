@@ -45,6 +45,7 @@ import { FunnelChart } from './components/FunnelChart';
 import { HistogramChart } from './components/HistogramChart';
 import { ParetoChart } from './components/ParetoChart';
 import { DualAxisChart } from './components/DualAxisChart';
+import { SankeyChart } from './components/SankeyChart';
 
 const CoreComponents = {
     BaseChart,
@@ -94,6 +95,7 @@ export {
     FunnelChart,
     HistogramChart,
     ParetoChart,
+    SankeyChart,
     PoPHelper,
     PropTypes,
     Table,

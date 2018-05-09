@@ -73,6 +73,8 @@ export function getTreeMapDimensions(buckets: VisualizationObject.IBucket[]): AF
     }];
 }
 
+
+
 function getLocalIdentifierFromAttribute(attribute: VisualizationObject.IVisualizationAttribute): string {
     return attribute.visualizationAttribute.localIdentifier;
 }
@@ -157,6 +159,29 @@ function getBarDimensions(mdObject: VisualizationObject.IVisualizationObjectCont
             itemIdentifiers: ((view && view.items || [])
                 .map(getLocalIdentifierFromAttribute))
                 .concat([MEASUREGROUP])
+        }
+    ];
+}
+
+function getSankeyDimensions(mdObject: VisualizationObject.IVisualizationObjectContent): AFM.IDimension[] {
+    const view: VisualizationObject.IBucket = mdObject.buckets
+            .find(bucket => bucket.localIdentifier === VIEW);
+
+    const stack: VisualizationObject.IBucket = mdObject.buckets
+        .find(bucket => bucket.localIdentifier === STACK);
+
+    
+
+     return [
+        {
+            
+            itemIdentifiers: (view && view.items || [])
+                .map(getLocalIdentifierFromAttribute)
+                .concat((stack && stack.items || [])
+                .map(getLocalIdentifierFromAttribute))
+        },
+        {
+            itemIdentifiers: [MEASUREGROUP]
         }
     ];
 }
@@ -349,10 +374,12 @@ export function generateDimensions(
     type: VisType
 ): AFM.IDimension[] {
     switch (type) {
+        case VisualizationTypes.SANKEY: {
+            return getSankeyDimensions(mdObject);
+        }         
         case VisualizationTypes.TREEMAP: {
             return getTreeMapDimensions(mdObject.buckets);
         }
-        
         
         case VisualizationTypes.TABLE: {
             return getTableDimensions(mdObject.buckets);
