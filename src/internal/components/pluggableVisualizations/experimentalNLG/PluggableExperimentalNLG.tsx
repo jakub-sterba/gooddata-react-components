@@ -133,18 +133,18 @@ export class PluggableExperimentalNLG extends AbstractPluggableVisualization {
                    title: 'Measures',
                    allowsDuplicateItems: true,
                    enabled: true,
-                   allowsReordering: true,
-                   allowsSwapping: true,
-                   itemsLimit: 20,
+                   allowsReordering: false,
+                   allowsSwapping: false,
+                   itemsLimit: 1,
                    isShowInPercentEnabled: false,
                    isShowInPercentVisible: false
               },
                attributes: {
                    accepts: [ATTRIBUTE, DATE],
                    title: 'Attributes',
-                   itemsLimit: 20,
+                   itemsLimit: 1,
                    allowsSwapping: false,
-                   allowsReordering: true,
+                   allowsReordering: false,
                    enabled: true,
                    isShowInPercentEnabled: false,
                    isShowInPercentVisible: false
